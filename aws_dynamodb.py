@@ -27,10 +27,10 @@ class DecimalEncoder(json.JSONEncoder):
 #For that we need guid, timestamp and message
 def call_aws(message):
 	now = datetime.datetime.utcnow()
-	timestamp = int(round((now - datetime.datetime(2016, 1 , 1)).total_seconds()))
+	timestamp = int(round((now - datetime.datetime(2018, 1 , 1)).total_seconds()))
 	#days = (now - datetime.datetime(2016, 1 , 1)).days + id
 	dynamodb = boto3.resource('dynamodb', region_name='us-east-1', endpoint_url="https://dynamodb.us-east-1.amazonaws.com")
-	table = dynamodb.Table('smartcap')
+	table = dynamodb.Table('SmartCap')
 	# your logic here...
 	try:
 		print("Trying to print " + message)
