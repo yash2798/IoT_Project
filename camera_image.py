@@ -12,7 +12,7 @@ camera_port = 004
 #Number of frames to throw away while the camera adjusts to light levels
 ramp_frames = 30
 display = "Display Window"
-file = "smart_cap.png"
+file = "smart_cam.png"
 
 #To handle the SIGINT when CTRL+C is pressed
 def exit_gracefully(signum,frame):
