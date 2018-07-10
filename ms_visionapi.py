@@ -108,7 +108,7 @@
  
 -    json = None
 +def read_image():
-+    pathToFileInDisk = r'smart_cap.png'
++    pathToFileInDisk = r'smart_cam.png'
 +    with open(pathToFileInDisk, 'rb') as f:
 +        data = f.read()
 +    return data
@@ -176,7 +176,7 @@
 -    
 -def run_main():
 -    # Load raw image file into memory
--    pathToFileInDisk = r'smart_cap.png'
+-    pathToFileInDisk = r'smart_cam.png'
 -    with open(pathToFileInDisk, 'rb') as f:
 -        data = f.read()
 -        
