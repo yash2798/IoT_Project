@@ -20,7 +20,7 @@
 -
 -_url = 'https://api.projectoxford.ai/vision/v1/analyses'
 -#Here you have to paste your primary key
--_key = 'your primary key here' 
+-_key = '58352edfcec14381a903bc44df00d40e' 
 -_maxNumRetries = 10
 +import numpy as np
 +import sys
@@ -62,7 +62,7 @@
 +headers = {
 +    # Request headers
 +    'Content-Type': 'application/octet-stream',
-+    'Ocp-Apim-Subscription-Key': 'replace me',
++    'Ocp-Apim-Subscription-Key': '58352edfcec14381a903bc44df00d40e',
 +}
  
 -        elif response.status_code == 200 or response.status_code == 201:
@@ -117,7 +117,7 @@
 -    if result is not None:
 +def analyze_image(data):
 +    try:
-+        conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
++        conn = httplib.HTTPSConnection('centralindia.api.cognitive.microsoft.com')
 +        conn.request("POST", "/vision/v1.0/analyze?%s" % params, data, headers)
 +        response = conn.getresponse()
 +        data = response.read()
