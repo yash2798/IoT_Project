@@ -49,16 +49,14 @@ def processRequest(json, data, headers, params):
         response = requests.request('post', _url, json=json, data=data, headers=headers, params=params)
 
         if response.status_code == 429:
-
-           print("Message: %s" % (response.json()['error']['message']))
-
+            print("Message: %s" % (response.json()['error']['message']))
             if retries <= _maxNumRetries:
                 time.sleep(1)
                 retries += 1
                 continue
             else:
                 print('Error: failed after retrying!')
-                break
+                    break
 headers = {
     # Request headers
     'Content-Type': 'application/octet-stream',
