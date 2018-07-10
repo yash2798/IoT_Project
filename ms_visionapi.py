@@ -56,7 +56,7 @@ def processRequest(json, data, headers, params):
                 continue
             else:
                 print('Error: failed after retrying!')
-                    break
+                break
 headers = {
     # Request headers
     'Content-Type': 'application/octet-stream',
