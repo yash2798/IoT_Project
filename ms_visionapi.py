@@ -14,7 +14,7 @@ from collections import defaultdict
 #import matplotlib.pyplot as plt
 ########### Python 2.7 #############
 import httplib, urllib, base64
- import signal
+import signal
 
 # Variables
 
